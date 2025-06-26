@@ -2,6 +2,7 @@ services:
   - type: web
     name: resume-bot
     env: python
+    runtime: python311          # 👈 Force supported version
     startCommand: python main.py
     buildCommand: ""
     envVars:
