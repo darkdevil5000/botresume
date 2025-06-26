@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Download Your Resume</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    a.button {
+      padding: 12px 25px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+    a.button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Your Resume is Ready!</h1>
+  <p>Click below to download your resume.</p>
+  <a id="downloadBtn" class="button" href="#">📥 Download Resume</a>
+
+  <script>
+    const file = new URLSearchParams(window.location.search).get('file');
+    if (file) {
+      document.getElementById("downloadBtn").href = "/resumes/" + file;
+    } else {
+      document.body.innerHTML = "<h1>❌ No file specified</h1>";
+    }
+  </script>
+</body>
+</html>

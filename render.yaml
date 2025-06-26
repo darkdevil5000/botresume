@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: resume-bot
+    env: python
+    startCommand: python main.py
+    buildCommand: ""
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: 7933453858:AAEZAHEZ6PbsEM3ZGVKaX1AGJFoPodF8A8Q
